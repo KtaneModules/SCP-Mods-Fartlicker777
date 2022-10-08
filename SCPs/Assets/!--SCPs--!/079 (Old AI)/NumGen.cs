@@ -181,19 +181,24 @@ public class NumGen : MonoBehaviour {
             return ExampleAnswer;
 
          case 17: //Double or half
+            ExampleAnswer = Rnd.Range(1, 10);
+            int Case17Temp = 0;
 
-            bool Case17Flag = true;
-
-            do {
-               Case17Flag = true;
-               ExampleAnswer = Rnd.Range(0, 10000000);
-               int[] AnswerArr = ExMath.ToIntArray(ExampleAnswer);
-               for (int i = 1; i < AnswerArr.Length; i++) {
-                  if (AnswerArr.Join("").Contains("0") || !(AnswerArr[i - 1] / 2 == AnswerArr[i] || AnswerArr[i - 1] * 2 == AnswerArr[i])) {
-                     Case17Flag = false;
+            for (int i = 0; i < Rnd.Range(4, 7); i++) {
+               Case17Temp = ExampleAnswer % 10;
+               ExampleAnswer *= 10;
+               if (Case17Temp > 4) {
+                  ExampleAnswer += Case17Temp / 2;
+               }
+               else {
+                  if (Rnd.Range(0, 3) != 0) {
+                     ExampleAnswer += Case17Temp * 2;
+                  }
+                  else {
+                     ExampleAnswer += Case17Temp / 2;
                   }
                }
-            } while (!Case17Flag);
+            }
             return ExampleAnswer;
 
          case 18: //Leading Zero

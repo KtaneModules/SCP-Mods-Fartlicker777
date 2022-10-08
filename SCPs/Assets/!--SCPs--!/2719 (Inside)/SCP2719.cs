@@ -247,6 +247,7 @@ public class SCP2719 : MonoBehaviour {
             else {
                StartCoroutine(UpdateInsideOutsideText("Outside"));
             }
+            break;
          }
       }
 

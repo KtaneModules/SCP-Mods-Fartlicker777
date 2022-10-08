@@ -14,8 +14,16 @@ MonoBehaviour:
   id: SCPMods
   title: SCP Mod Pack
   author: me
-  description: 'The Foundation has a very clear policy: "Secure, Contain, Protect.
-    Not Destroy, Destroy, Destroy."'
+  description: "Welcome to the SCP Foundation, researcher.\r\n\r\nIt has likely been
+    a difficult journey to find yourself where you are today, having to be scouted
+    out by people you've never met before and invited to exams and interviews for
+    a position you were never fully told of. We can imagine you already have a few
+    questions, whether it be where you are, who is here with you, or why you were
+    chosen to be here. Many of these questions we will not be able to answer. Some
+    of those, we will.\r\n\r\nThe Foundation has a very clear policy: \"Secure, Contain,
+    Protect. Not Destroy, Destroy, Destroy.\" We are NOT the Global Occult Coalition.\n\nCurrently
+    contains:\n\u2022 [url=https://scp-wiki.wikidot.com/scp-079]SCP-079[/url]\n\u2022
+    [url=https://scp-wiki.wikidot.com/scp-2719]SCP-2719[/url]"
   version: 
   outputFolder: build
   previewImage: {fileID: 2800000, guid: 2dbfdafc30eec95428b87bda942c6c7c, type: 3}
