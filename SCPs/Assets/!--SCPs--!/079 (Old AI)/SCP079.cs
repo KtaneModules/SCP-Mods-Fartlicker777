@@ -254,11 +254,11 @@ public class SCP079 : MonoBehaviour {
       yield return null;
       Command = Command.Trim();
       int Weedhoe = 0;
-      if ((Command.Length < 5 || Command.Length > 7) && SeedtoSubmit != 8) {
-         Strike();
-         yield break;
-      }
-      else if (int.TryParse(Command, out Weedhoe)) {
+      if (int.TryParse(Command, out Weedhoe) && Weedhoe >= 0) { 
+         if ((Command.Length < 5 || Command.Length > 7) && SeedtoSubmit != 8) {
+            Strike();
+            yield break;
+         }
          for (int i = 0; i < Command.Length; i++) {
             HandleKey(Command[i]);
             yield return new WaitForSeconds(.1f);
