@@ -126,7 +126,16 @@ public class SCP079 : MonoBehaviour {
       }
    }
 
+   bool InvalidViewPoint () {
+      if ((Mod.transform.rotation.eulerAngles.x > 287f || Mod.transform.rotation.eulerAngles.x < 76f) && (Mod.transform.rotation.eulerAngles.z > 285f || Mod.transform.rotation.eulerAngles.z < 71f)) {
+         return true;
+      }
+      return false;
+   }
+
    void Update () {
+         Debug.Log(Mod.transform.rotation.eulerAngles.x); //288 - 75X
+      //Debug.Log(Mod.transform.rotation.eulerAngles.z); //286 - 70Z
       if (!Application.isEditor) { //Matches the hum to the game volume, has to be audio source since it stops midway
          HumAS.volume = GameMusicControl.GameSFXVolume;
       }
@@ -134,7 +143,7 @@ public class SCP079 : MonoBehaviour {
          HumAS.volume = 0;
       }
       
-      if (Cooldown || ModuleSolved) {
+      if (Cooldown || ModuleSolved || !InvalidViewPoint()) {
          return;
       }
       if (Focused) {
